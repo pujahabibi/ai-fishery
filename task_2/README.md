@@ -16,6 +16,8 @@ pip install -r requirements.txt
 
 3. Place the weights inside the `task_2/` directory
 
+4. You have to fill the API Key for running the Google Maps API. You will find the API Key in my replying email to submit this task to `Mr. Ardi`. Then. place it at line 6 in file retrieve_maps.py
+
 ## How to Run
 To run this project, follow these steps:
 1. open a terminal inside the folder `task_2/`
