@@ -1,5 +1,5 @@
-# Task 3 (Vibrio Detection)
-This is a folder to manage vibrio detection project. This project process the image of vibrio from a microsope, then uses object detection to count all vibrio that detected
+# Task 2 (Shrimp Ponds Information)
+This is a folder to manage shrimp ponds infomation. This project process the input the get the data of geolocation and imagery satellite from given coordinate
 
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
@@ -12,9 +12,9 @@ To setup and install all required files, follow these steps:
 pip install -r requirements.txt
 ```
 
-2. Download the weights before run the progran in this [link](https://drive.google.com/file/d/1chNf6ih1GEHEleGGhjqrMNQWO3eypxUU/view?usp=sharing)
+2. Download the weights before run the progran in this [link](https://drive.google.com/file/d/1-Q1zsJxs7XR37mN0bjsuLisaPzJim2st/view?usp=sharing)
 
-3. Place the weights inside the `task_3/` directory
+3. Place the weights inside the `task_2/` directory
 
 ## How to Run
 To run this project, follow these steps:
@@ -30,4 +30,4 @@ flask run
 
 4. Open this URL `http://127.0.0.1:5000/` at your browser
 
-5. Upload the image, the you will get the result
+5. input the name, island, langitude, and longitude coordinate
