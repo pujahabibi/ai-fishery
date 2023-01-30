@@ -1,0 +1,20 @@
+<!-- result.html -->
+<html>
+  <head>
+    <title>Detection Result</title>
+  </head>
+  <body>
+    <h1>Detection Result</h1>
+    <p>Image Visualization: <img src="{{ result.get('img_visualization') }}" width="1000" height="1000"></p>
+    <p>Vibrio Counting:</p>
+    <ul>
+      {% for key, value in result.get('vibrio_counting').items() %}
+      <li>{{ key }}: {{ value }}</li>
+    {% endfor %}
+    </ul>
+    <br><br>
+    <a href="{{url_for('index')}}">
+      <button>Go Back to Home</button>
+    </a>
+  </body>
+</html>
