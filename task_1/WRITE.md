@@ -1,6 +1,6 @@
 # Document OCR
 1. In this task, I want to extract all of information in the form document of daily cultivation
-2. I only got 38 sample images for training data
+2. I only have 38 given images for training dataset
 3. After observed all of samples, I got some information that of which 27 entities that I need to extract (tanggal, blok, kolam, DOC, jenis pakan, f_d, frekuensi pakan jam 7, frekuensi pakan jam 11, frekuensi pakan jam 15, frekuensi pakan jam 20, ANCHO, DO pagi, DO sore/malam, pH pagi, ph sore/malam, suhu pagi, suhu sore/malam, SAL, mati, T air, KEC, warna, cuaca, siphon, kincir, treatment air)
 4. only 1 entity that I did not extract which is TDS. because, based on 38 samples, there is no sample where the TDS column have a content
 5. For this approach, we have 2 stages. first stage is to detect all of entity. Then, at the second stage, all of detected entity will be passed to `pytesseract` library to convert text-image to string. 

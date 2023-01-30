@@ -162,65 +162,10 @@ def parseXmlFiles(xml_path):
 
                     if " " in object_name:
                         object_name = object_name.replace(" ", "")
-                    
-                    # if "FLORIDINA ORANGE PET" in object_name:
-                    #     print("REPLACE 35 ML with 60 ML")
-                    #     object_name = 'FLORIDINA ORANGE PET 350'
-                    # elif 'GRANITA CAPPUCINO FLAVORED WATER' in object_name:
-                    #     print("REPLACE GRANITA")
-                    #     object_name = 'GRANITA CAPPUCINO FLAVORED WATER 175'
-                    # elif "Bear Brand Plain CAN 140" in object_name:
-                    #     print("REPLACE Bear Brand Plain CAN 140")
-                    #     object_name = 'Bear Brand Plain CAN 189'
-                    # elif "The Botol Sosro Jasmine RGB 240" in object_name:
-                    #     print("REPLACE The Botol Sosro Jasmine RGB 240")
-                    #     object_name = 'The Botol Sosro Jasmine RGB 220'
-                    # elif 'Teh Botol Sosro Jasmine RGB 220' in object_name:
-                    #     print("REPLACE The Botol Sosro Jasmine RGB 240")
-                    #     object_name = 'The Botol Sosro Jasmine RGB 220'
-                    # elif "Uc 1000 Lemon RGB 120" in object_name:
-                    #     print("REPLACE Uc 1000 Lemon RGB 120")
-                    #     object_name = 'Uc 1000 Lemon RGB 140'
-                    # elif "Uc 1000 Orange RGB 120" in object_name:
-                    #     print("REPLACE Uc 1000 Orange RGB 120")
-                    #     object_name = 'Uc 1000 Orange RGB 140'
-                    # elif "S-tea Sosro Jasmine RGB 318" in object_name or "S-Tea Sosro Jasmine RGB 318" in object_name or "S-tee Sosro Jasmine RGB 318" in object_name:
-                    #     print("REPLACE S-tea Sosro Jasmine RGB 318")
-                    #     object_name = 'S-Tee Sosro Jasmine RGB 318'
-                    # elif "Bintang Radle Lemon CAN 330" in object_name:
-                    #     print("REPLACE Bintang Radle Lemon CAN 330")
-                    #     object_name = 'Bintang Radler Lemon CAN 330'
-                    # elif "Bintang Radle Lemon CAN 330" in object_name:
-                    #     print("REPLACE Bintang Radle Lemon CAN 330")
-                    #     object_name = 'Bintang Radler Lemon CAN 330'
-                    # elif "FRESTEA Milk Tea Brown Sugar PET 330" in object_name:
-                    #     print("REPLACE MILK TEA")
-                    #     object_name = 'FRESTEA MILKTEA PET 330'
-                    # elif "others" in object_name:
-                    #     print("REPLACE OTHERS")
-                    #     object_name = "foreign product"
-                    # elif "RIO GULA BATU CUP" in object_name:
-                    #     print("REPLACE RIO GULA BATU CUP")
-                    #     object_name = "RIO GULA BATU CUP 200"
-                    # elif "GREEN SANDS LEMON&GRAPE CAN" in object_name:
-                    #     print("REPLACE RIO GULA BATU CUP")
-                    #     object_name = "GREEN SANDS LEMON&GRAPE CAN 250"
-                    # elif "GREEN SANDS LIME&LYCHEE CAN" in object_name:
-                    #     print("REPLACE RIO GULA BATU CUP")
-                    #     object_name = "GREEN SANDS LIME&LYCHEE CAN 250"
-                    # elif "fanta sodawater pet 390" in object_name:
-                    #     print("REPLACE fanta sodawater pet 390")
-                    #     object_name = 'fanta_sodawater_pet_390'
-                    # elif '\t' in object_name:
-                    #     object_name = object_name.replace("\t", ' ')
-                    #print(f)
-                    #print("OBJECT_NAME", object_name)
                     if object_name not in category_set:
                         current_category_id = addCatItem(object_name, category_set2[object_name])
-                        #print("NOT IN CT_SET", current_category_id)
                     else:
                         current_category_id = category_set[object_name]
-                        #print("IN CT_SET", current_category_id)
 
                     #print(category_set)
 

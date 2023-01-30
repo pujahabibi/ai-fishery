@@ -1,6 +1,6 @@
 # Shrimp Ponds Information
 1. In this task, I wanted to find some information (jumlah kolam, estimasi luas, geohash, geometry polygon, and alamat kolam)
-2. They did not give any dataset that made me have no idea how to do it
+2. I did not have any imagery satellite of ponds images at all
 3. I tried to search the location based on the given ponds coordinate from 5 tables on Google Maps. Then, I found the imagery satellite of block of shrimp ponds. Then, I realized that I can use a keyword `shrimp farm` to find other location of shrimp ponds from google maps. I found around 15 or 20 locations around ASEAN, like Indonesia, Thailand, Vietnam, Phillipines, and Myanmar. Then, I take a screen shot of the image from different angle and zoom parameter in order to get variation. As a result, I got around 94 dataset. This dataset will be used to find `jumlah kolam` information. 
 4. Then, I tried to search on google to find some information like geohash, geometry polygon, and alamat kolam from given langitude and longitude coordinate. Fortunately, I found the way to get it in python
 5. Thus, I used computer vision based object detection approach to get jumlah kolam from given specific langitude and longitude coordinate. I used Google Maps API in order to retrieve the imagery satellite, which will be passed to the object detection model. Then, I used `geohash2`, `geopy`, and `Shapely` to extract some information like alamat kolam, geohash, and alamat kolam
