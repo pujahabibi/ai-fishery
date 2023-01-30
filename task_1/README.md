@@ -14,21 +14,19 @@ pip install -r requirements.txt
 
 2. Download the weights before run the progran in this [link](https://drive.google.com/file/d/1LCOC8g0bfI8FbNG312GdQHL1lmlovvkH/view?usp=sharing)
 
-3. Place the weights inside the `task_2/` directory
+3. Place the weights inside the `task_1/` directory
 
 ## How to Run
 To run this project, follow these steps:
 1. open a terminal inside the folder `task_1/`
-2. type this command
+2. run gunicorn
 ```
-export FLASK_ENV=development
-export FLASK_APP=api.py
+gunicorn -w 1 -t 600 -b 127.0.0.1:8811 api:app
 ```
-3. Then, run the flask by typing this command
-```
-flask run
-```
+3. Then, open Postman and copy this URL `http://127.0.0.1:8811`
 
-4. Open this URL `http://127.0.0.1:5000/` at your browser
+4. Choose POST
 
-5. input the name, island, langitude, and longitude coordinate
+5. Choose Body below the input URL
+
+6. set a key name called `image` and the input is File
