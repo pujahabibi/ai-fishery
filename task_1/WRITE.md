@@ -16,18 +16,28 @@
 
 13. Then, we can train the model. To know the procedure, just check folder
 
-14. Because the training takes sometime, I stop at epoch 600. Then, I evaluate the model and got performance like this with loss 0.37. `PS: I am sorry I can't show the plot of the loss. Because there was an issue to run the tensorboard`
+14. Because the training takes sometime, I stop at epoch 600. Then, I evaluate the model and got performance like this with loss 0.37. Based on the AP information below, we can see that we got AP 0.932 if the IoU threshold is 0.5, which is pretty good performance.
 ```
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.460
- Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.642
- Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.533
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.234
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.461
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.491
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.132
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.488
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.488
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.233
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.488
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.503
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=800 ] = 0.662
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=800 ] = 0.932
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=800 ] = 0.775
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=800 ] = 0.500
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=800 ] = 0.661
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=800 ] = 0.672
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.180
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.709
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=800 ] = 0.709
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=800 ] = 0.499
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=800 ] = 0.706
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=800 ] = 0.698
  ```
+
+`PS: I am sorry I can't show the plot of the loss. Because there was an issue to run the tensorboard`
+
+15. After that, I made the inference function to produce the bounding box prediction
+
+16. Then, I integrated with `pytesseract` to read the text from the image. I did not make the text reader model from scratch because I had no time to train it with limited time. 
+
+17. The limitations of using `pytesseract` is the model is bad at reading handwritten text. Moreoever, the crop image of the text is a little bit blurry which made the model hard to predict the text and give bad performance.
+
+18. Finally, the next step that I wanna do is to do post-processing technique in order to produce the output format like the table. However, I did not have time to finish it
