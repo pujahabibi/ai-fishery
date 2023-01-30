@@ -53,9 +53,9 @@ def grouping_bbox(bb):
     single_entity = ['tanggal', 'blok']
     for i in range(len(bboxes)):
         if bboxes[i]['class'] in single_entity:
-            class_dict[bboxes[i]['class']] = [bboxes[i]['text'], bboxes[i]['ymin']]
+            class_dict[bboxes[i]['class']] = [bboxes[i]['text']]
         else:
-            list_bbox = [bboxes[i]['text'], bboxes[i]['ymin']]
+            list_bbox = [bboxes[i]['text']]
             if bboxes[i]['class'] not in class_dict:
                 class_dict[bboxes[i]['class']] = [list_bbox]
             else:

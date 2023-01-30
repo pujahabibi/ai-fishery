@@ -18,10 +18,11 @@ pip install -r requirements.txt
 
 ## How to Run
 To run this project, follow these steps:
-1. open a terminal
+1. open a terminal inside the folder `task_2/`
 2. type this command
 ```
-export FLASK_APP=run.py
+export FLASK_ENV=development
+export FLASK_APP=api.py
 ```
 3. Then, run the flask by typing this command
 ```
