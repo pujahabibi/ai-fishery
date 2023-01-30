@@ -10,9 +10,9 @@
 9. For the output, I used [CenterNet](https://github.com/xingyizhou/CenterNet) because the output is simple. The object tries to predict the center of the object, then regress the bounding box size. CenterNet is one of the object detection model which is anchor-free model. We did not need anchor setting to train it. it consists of three heads (detecting class, bounding box regression, and center-point regression)
 10. Training deep neural networks model is time-consuming and expensive. you need more data to make the model robust. But, 38 samples is very little. So, I used augmentation technique to make more variations and amount of data. The augmentation techniques that I used are Blur/Fog, RGBShift, Brightness, Contrast, and ColorJitter. The reasons why I did not use geometric augmentation (Vertical Flip or Rotation) is because we want the model to learn the structure or the layout of the document. If we use geometric augmentation, it will make the model hard to recognize the layout. Here is the [sample](https://drive.google.com/drive/folders/1DKcrJBi6hnW3HtHClzK7vYzV9koIiOVy?usp=share_link) of the augmented data. I got around 322 dataset
 
-11. After analyzed the dataset and decided the apporach, we have to annotate the image for the ground truth, which consist of class and bounding box. To annoate the image, I used [labelimg](https://github.com/heartexlabs/labelImg). Here is the [sample](https://drive.google.com/drive/folders/10-BFbVzVUPohieRxMBpFcri7jY8StVh-?usp=share_link) of the bounding box with its annotation file
+11. After analyzed the dataset and decided the apporach, we have to annotate the image for the ground truth, which consist of class and bounding box. To annoate the image, I used [labelimg](https://github.com/heartexlabs/labelImg). Here is the [dataset](https://drive.google.com/file/d/1KspFMjJnvqt0QIAY9ANuGwqNBXcfzNlD/view?usp=share_link) of the bounding box with its annotation file
 
-12. Then, we have to split the dataset into three folders (train, val, and test). The portion are 80%, 10%, 10%, respectively. 
+12. Then, we have to split the dataset into three folders (train and val). The portion are 80%, 20%, respectively. 
 
 13. Then, we can train the model. To know the procedure, just check folder
 
