@@ -37,7 +37,7 @@ class BaseDetector(object):
     
     print('Creating model...')
     self.model = create_model("efv0_0", {'hm': 27, 'wh': 2, 'reg': 2}, 64)#create_model(opt.arch, opt.heads, opt.head_conv)
-    self.model = load_model(self.model, 'model_last_69.pth')#"centernet_wings_210121.pth")#load_model(self.model, opt.load_model)
+    self.model = load_model(self.model, 'fishery_ocr.pth')#"centernet_wings_210121.pth")#load_model(self.model, opt.load_model)
     self.model = self.model.to("cpu")#self.model.to(opt.device)
     self.model.eval()
 
