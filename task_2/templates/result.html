@@ -1,0 +1,23 @@
+<!-- result.html -->
+<html>
+  <head>
+    <title>Location Information Result</title>
+  </head>
+  <body>
+    <h1>Location Information Result</h1>
+    <p>Name: {{ name }}</p>
+    <p>Island: {{ island }}</p>
+    <p>Coordinate: ({{lat}}, {{lng}})
+    <p>Address: {{ result.get('alamat') }}</p>
+    <p>Geo Hash: {{result.get('geohash') }}</p>
+    <p>Estimated Area: {{ result.get('estimasi_luas') }}</p>
+    <p>Number of Ponds: {{ result.get('jumlah_kolam') }}</p>
+    <p>Bounding Box Location: {{ result.get('bbox_loc') }}</p>
+    <p>Polygon Coordinate: {{ result.get('polygon_coordinates') }}
+    <p>Image Visualization: <img src="{{ result.get('image_visualization') }}"></p>
+    <br><br>
+    <a href="{{url_for('index')}}">
+      <button>Go Back to Home</button>
+    </a>
+  </body>
+</html>
