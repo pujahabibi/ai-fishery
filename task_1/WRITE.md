@@ -16,7 +16,7 @@
 
 13. Then, we can train the model. To know the procedure, just check folder
 
-14. Because the training takes sometime, I stop at epoch 600. Then, I evaluate the model and got performance like this with loss 0.37. Based on the AP information below, we can see that we got AP 0.932 if the IoU threshold is 0.5, which is pretty good performance.
+14. Because the training takes sometime, I stop at epoch 600. Then, I evaluate the model and got performance like this with loss 0.37. Based on the AP information below, we can see that we got AP 0.932 if the IoU threshold is 0.5, which is pretty good performance. The mechanism for testing will be explained at folder
 ```
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=800 ] = 0.662
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=800 ] = 0.932
