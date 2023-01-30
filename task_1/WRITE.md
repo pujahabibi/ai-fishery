@@ -17,6 +17,7 @@
 13. Then, we can train the model. To know the procedure, just check folder
 
 14. Because the training takes sometime, I stop at epoch 600. Then, I evaluate the model and got performance like this with loss 0.37. `PS: I am sorry I can't show the plot of the loss. Because there was an issue to run the tensorboard`
+```
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.460
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.642
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.533
@@ -29,3 +30,4 @@
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.233
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.488
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.503
+ ```
