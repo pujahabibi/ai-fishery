@@ -11,5 +11,4 @@
 9. Training deep neural networks model is time-consuming and expensive. you need more data to make the model robust. But, 38 samples is very little. So, I used augmentation technique to make more variations and amount of data. The augmentation techniques that I used are Blur/Fog, RGBShift, Brightness, Contrast, and ColorJitter. The reasons why I did not use geometric augmentation (Vertical Flip or Rotation) is because we want the model to learn the structure or the layout of the document. If we use geometric augmentation, it will make the model hard to recognize the layout. 
 
 here is some of sample of augmentation image
-brightness
-![](write/0ECD0408-7711-4241-8CA1-7168B339C92E_brightness.JPG) 
+<p align="center"> <img src='write/0ECD0408-7711-4241-8CA1-7168B339C92E_brightness.JPG' align="center" height="230px"> <img src='write/0ECD0408-7711-4241-8CA1-7168B339C92E_color.JPG' align="center" height="230px"> </p>
