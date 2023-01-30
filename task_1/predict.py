@@ -11,6 +11,9 @@ import io
 import requests
 import random
 import torch
+import bbox_add
+
+import pytesseract
 
 import xml.etree.cElementTree as ET
 
@@ -194,14 +197,14 @@ def predict(img_file):
   ret = detector.run(img_file)
   results = ret["results"]
 
-  print(results)
-
   list_dets = []
 
   for j in range(1, len(results)+1):
     for bbox in results[j]:
       if bbox[4] >= 0.2:
-        list_dets.append(np.array([bbox[0], bbox[1], bbox[2], bbox[3], classes[j-1], bbox[4]]))
+        crop_img = img[int(bbox[1]):int(bbox[3]), int(bbox[0]):int(bbox[2])]
+        text = pytesseract.image_to_string(crop_img)
+        list_dets.append(np.array([bbox[0], bbox[1], bbox[2], bbox[3], classes[j-1], bbox[4], text]))
 
   takedown_index = {}
   for a in range(len(list_dets)):
@@ -236,4 +239,15 @@ def predict(img_file):
 
   cv2.imwrite(filename+"_dot_seed"+".png", img)
 
-  return {"output":list_dets} 
+  convert_bbox_format = bbox_add.convert_bounding_boxes(list_dets)
+  count_class = bbox_add.add_field_to_max_class(convert_bbox_format)
+
+  #print(count_class['kolam'], count_class)
+  max_value = max(count_class.values())
+
+  get_lowest_class = [key for key, value in count_class.items() if value < max_value]
+
+
+  new_bbox = bbox_add.grouping_bbox(list_dets)
+
+  return {"tanggal":new_bbox['tanggal'][0], "blok":new_bbox['blok'][0], "output":new_bbox} 
