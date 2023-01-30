@@ -36,15 +36,15 @@ class BaseDetector(object):
     #   opt.device = torch.device('cpu')
     
     print('Creating model...')
-    self.model = create_model("efv0_0", {'hm': 1, 'wh': 2, 'reg': 2}, 64)
-    self.model = load_model(self.model, 'ponds_detection.pth')
-    self.model = self.model.to("cpu")
+    self.model = create_model("efv0_0", {'hm': 27, 'wh': 2, 'reg': 2}, 64)#create_model(opt.arch, opt.heads, opt.head_conv)
+    self.model = load_model(self.model, 'model_last_69.pth')#"centernet_wings_210121.pth")#load_model(self.model, opt.load_model)
+    self.model = self.model.to("cpu")#self.model.to(opt.device)
     self.model.eval()
 
     self.mean = np.array([0.408, 0.447, 0.47], dtype=np.float32).reshape(1, 1, 3)#np.array(opt.mean, dtype=np.float32).reshape(1, 1, 3)
     self.std = np.array([0.289, 0.274, 0.278], dtype=np.float32).reshape(1, 1, 3)#np.array(opt.std, dtype=np.float32).reshape(1, 1, 3)
-    self.max_per_image = 100
-    self.num_classes = 1#opt.num_classes
+    self.max_per_image = 800
+    self.num_classes = 27#opt.num_classes
     self.scales = [1.0]#opt.test_scales
     #self.opt = opt
     self.pause = True
