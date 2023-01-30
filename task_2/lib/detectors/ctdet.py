@@ -8,7 +8,6 @@ from progress.bar import Bar
 import time
 import torch
 
-from lib.external.nms import soft_nms
 from lib.models.decode import ctdet_decode, simple_ctdet_decode
 from lib.models.utils import flip_tensor
 from lib.utils.image import get_affine_transform
@@ -87,8 +86,8 @@ class CtdetDetector(BaseDetector):
     for j in range(1, self.num_classes + 1):
       results[j] = np.concatenate(
         [detection[j] for detection in detections], axis=0).astype(np.float32)
-      if len(self.scales) > 1 or nms:#self.opt.nms:
-         soft_nms(results[j], Nt=0.5, method=2)
+      # if len(self.scales) > 1 or nms:#self.opt.nms:
+      #    soft_nms(results[j], Nt=0.5, method=2)
     scores = np.hstack(
       [results[j][:, 4] for j in range(1, self.num_classes + 1)])
     if len(scores) > self.max_per_image:
