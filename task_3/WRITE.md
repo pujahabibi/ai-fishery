@@ -14,9 +14,9 @@
 
 9. Then, we have to split the dataset into three folders (train, and val). The portion are 80%, 20% respectively. 
 
-10. Then, we can train the model. To know the procedure, just check folder
+10. Then, we can train the model. To know the procedure, just check in README.md at CenterNet folder
 
-11. Because the training takes sometime, I stop at epoch 350. Then, I evaluate the model and got performance like this with loss 0.46. Based on the AP information below, we can see that we got AP 0.752 if the IoU threshold is 0.5, which is pretty good performance. The mechanism for testing will be explained at folder
+11. Because the training takes sometime, I stop at epoch 350. Then, I evaluate the model and got performance like this with loss 0.46. Based on the AP information below, we can see that we got AP 0.752 if the IoU threshold is 0.5, which is pretty good performance. The mechanism for testing will be explained in README.md at CenterNet folder
 ```
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.413
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.752
