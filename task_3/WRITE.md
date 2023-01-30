@@ -1,4 +1,4 @@
-# Shrimp Ponds Information
+# Vibrio Detection
 1. In this task, I wanted to find some information (jumlah kolam, estimasi luas, geohash, geometry polygon, and alamat kolam)
 2. They did not give any dataset that made me have no idea how to do it
 3. I tried to search the location based on the given ponds coordinate from 5 tables on Google Maps. Then, I found the imagery satellite of block of shrimp ponds. Then, I realized that I can use a keyword `shrimp farm` to find other location of shrimp ponds from google maps. I found around 15 or 20 locations around ASEAN, like Indonesia, Thailand, Vietnam, Phillipines, and Myanmar. Then, I take a screen shot of the image from different angle and zoom parameter in order to get variation. As a result, I got around 94 dataset. This dataset will be used to find `jumlah kolam` information. 
@@ -42,5 +42,3 @@
 15. In order to run it, you can follow `README.md` file. it runs on flask which will open a index.html website. You will be asked to input Name, Island, Langitude, and Longitude coordinate. Then, it will show all of information.
 
 16. For estimasi luas kolam, I failed to find out the approach. So, it is the only information that I did not get
-
-17. I did not implement the part that uses ClearML for experiment tracking and serving because I do not have any knowledge about it. Additionally, with the limited time, I do not have any much time to learn it. I mostly spend my time in data collection, annotation, and data augmentation. And designing the inference pipeline for the final output. 

@@ -41,3 +41,5 @@
 17. The limitations of using `pytesseract` is the model is bad at reading handwritten text. Moreoever, the crop image of the text is a little bit blurry which made the model hard to predict the text and give bad performance.
 
 18. Finally, the next step that I wanna do is to do post-processing technique in order to produce the output format like the table. However, I did not have time to finish it
+
+19. I did not implement the part that uses ClearML for experiment tracking and serving because I do not have any knowledge about it. Additionally, with the limited time, I do not have any much time to learn it. I mostly spend my time in data collection, annotation, and data augmentation. And designing the inference pipeline for the final output. 
