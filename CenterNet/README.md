@@ -2,7 +2,7 @@
 
 ## Trianing Procedur
 
-1. Download the EfficientDet D0 Pre-trained model
+1. Download the EfficientDet D0 Pre-trained model [here](https://drive.google.com/file/d/1z1aDSa6uuY2IqSPpk55-yq5aTvnl5hVe/view?usp=share_link)
 2. Place it a `models` folder
 3. Open `src/lib/models/networks/efv0.py`, and change the `line 109` with the path of folder you replace the pre-trained weight
 4. Create a folder in a `data` folder based on the of the project `ex: vibrio` to place the image dataset

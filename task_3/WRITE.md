@@ -10,7 +10,7 @@
 
 7. Then I observed that from 20 images, it only consists of 2 colors, which is yellow and green. The challenge is that there are some of vibrios that attach together, which is very hard to count how many of them. In order to determine the number of vibrio that attach one another, I look at how many 'circle side' of the vibrio. 
 
-8. After analyzed the dataset and decided the apporach, we have to annotate the image for the ground truth. To annoate the image, I used [labelimg](https://github.com/heartexlabs/labelImg). Here is the [dataset](https://drive.google.com/drive/folders/10-BFbVzVUPohieRxMBpFcri7jY8StVh-?usp=share_link) of the bounding box with its annotation file
+8. After analyzed the dataset and decided the apporach, we have to annotate the image for the ground truth. To annoate the image, I used [labelimg](https://github.com/heartexlabs/labelImg). Here is the [dataset](https://drive.google.com/file/d/1plrWGlBRlCln6Tj7CbNdCM76DhKK-UEk/view?usp=share_link) of the bounding box with its annotation file
 
 9. Then, we have to split the dataset into three folders (train, and val). The portion are 80%, 20% respectively. 
 
