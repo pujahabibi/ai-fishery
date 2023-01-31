@@ -41,3 +41,5 @@
 14. In order to run it, you can follow `README.md` file. it runs on flask which will open a index.html website. You will be asked to upload the image of vibrio from microscope image.
 
 15. I did not implement the part that uses ClearML for experiment tracking and serving because I do not have any knowledge about it. Additionally, with the limited time, I do not have any much time to learn it. I mostly spend my time in data collection, annotation, and data augmentation. And designing the inference pipeline for the final output. 
+
+16. Here is [result documentation](https://drive.google.com/drive/folders/1lwf0h_FPJ2QO1l_Fa1b-vi1sSgyUa2_3?usp=share_link)

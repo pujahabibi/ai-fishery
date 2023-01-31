@@ -44,3 +44,6 @@
 16. For estimasi luas kolam, I failed to find out the approach. So, it is the only information that I did not get
 
 17. I did not implement the part that uses ClearML for experiment tracking and serving because I do not have any knowledge about it. Additionally, with the limited time, I do not have any much time to learn it. I mostly spend my time in data collection, annotation, and data augmentation. And designing the inference pipeline for the final output. 
+
+18. Here is the [result documentation](https://drive.google.com/drive/folders/1rc8PkFPQILDvARNBwMuUYejAjDttUfYb?usp=share_link)
+

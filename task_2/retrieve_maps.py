@@ -3,7 +3,7 @@ import time
 import os
 
 # Your Google Maps API key
-API_KEY = ''
+API_KEY = 'AIzaSyAqpKaOnjKHYLlpqF0bA_zwZApIn0YXYZM'
 
 
 def get_map(coordinate):
